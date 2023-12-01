@@ -1,0 +1,29 @@
+{
+  "name": "galacticgaming",
+  "version": "1.0.0",
+  "description": "A platform for gamers to meet with other gamers and do what they wanna do",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build",
+    "render-build": "npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Desean2001/GalacticGaming.git"
+  },
+  "keywords": [
+    "gaming"
+  ],
+  "author": "Sean Finley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Desean2001/GalacticGaming/issues"
+  },
+  "homepage": "https://github.com/Desean2001/GalacticGaming#readme",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
