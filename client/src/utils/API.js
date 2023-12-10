@@ -27,6 +27,18 @@ export const loginUser = (userData) => {
     });
 };
 
+export const saveGame = (gameData, token) => {
+    return fetch('/api/users', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(gameData),
+    });
+  };
+  
+
 export const gameSeach = (keyId, search) => {
     return fetch(`https://api.rawg.io/api/games?key=${keyId}&search=${search}&page_size=4`)
 };

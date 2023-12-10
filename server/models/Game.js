@@ -14,7 +14,7 @@ const gameSchema = new Schema({
     released: {
         type: String
     },
-    id: {
+    gameId: {
         Number
     }
 });
