@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
-import { ChakraProvider } from '@chakra-ui/react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App.jsx'
 import './index.css'
+
+import SearchGames from './pages/SearchGames.jsx'
 
 const router = createBrowserRouter([
   {
