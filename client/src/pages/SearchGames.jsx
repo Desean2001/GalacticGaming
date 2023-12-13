@@ -97,12 +97,12 @@ const SearchGames = () => {
                   onChange={(e) => setSearchInput(e.target.value)}
                   type='text'
                   size='lg'
-                  placeholder='Search for a book'
+                  placeholder='Search for a Game'
                 />
               </Col>
               <Col xs={12} md={4}>
                 <Button type='submit' variant='success' size='lg'>
-                  Submit Search
+                  Submit
                 </Button>
               </Col>
             </Row>
@@ -114,7 +114,7 @@ const SearchGames = () => {
         <h2 className='pt-5'>
           {searchedGame.length
             ? `Viewing ${searchedGame.length} results:`
-            : 'Search for a book to begin'}
+            : 'Search for a Game'}
         </h2>
         <Row>
           {searchedGame.map((game) => {
