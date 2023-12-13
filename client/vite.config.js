@@ -6,7 +6,7 @@ import env from 'vite-plugin-env-compatible'
 export default defineConfig({
   plugins: [react(), env()],
   define: {
-    'process.env.VITE_KEY_ID': JSON.stringify(process.env.VITE_KEY_ID),
+    'import.meta.env.VITE_KEY_ID': JSON.stringify(import.meta.env.VITE_KEY_ID),
   },
   server: {
     port: 4000,

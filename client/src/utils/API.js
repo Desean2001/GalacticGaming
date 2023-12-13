@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import axios from 'axios';
 
 export const getMe = (token) => {
     return fetch('/api/users/me', {
@@ -40,7 +41,8 @@ export const saveGame = (gameData, token) => {
     });
   };
   
+const key = import.meta.env.VITE_KEY_ID
 
 export const gameSeach = (search) => {
-    return fetch(`https://api.rawg.io/api/games?key=${import.meta.env.VITE_KEY_ID}&search=${search}&page_size=4`)
+    return axios.get(`https://api.rawg.io/api/games?key=${key}&search=${search}&page_size=4`)
 };
