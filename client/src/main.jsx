@@ -7,7 +7,6 @@ import './index.css'
 
 import SearchGames from './pages/SearchGames'
 import LoginForm from './pages/login.jsx'
-import { StrictMode } from 'react'
 
 const router = createBrowserRouter([
   {
@@ -18,8 +17,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <SearchGames />
-      },
-      {
+      }, {
         path: '/login',
         element: <LoginForm />
       }
@@ -28,7 +26,5 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
 )
