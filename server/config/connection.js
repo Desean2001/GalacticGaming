@@ -1,5 +1,7 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 
-mongoose.connect(import.meta.env.VITE_MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 module.exports = mongoose.connection;

@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 export const getMe = (token) => {
     return fetch('/api/users/me', {
         headers: {
@@ -39,6 +41,6 @@ export const saveGame = (gameData, token) => {
   };
   
 
-export const gameSeach = (keyId, search) => {
-    return fetch(`https://api.rawg.io/api/games?key=${keyId}&search=${search}&page_size=4`)
+export const gameSeach = (search) => {
+    return fetch(`https://api.rawg.io/api/games?key=${import.meta.env.VITE_KEY_ID}&search=${search}&page_size=4`)
 };
