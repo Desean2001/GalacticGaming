@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import Auth from '../utils/auth';
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -31,8 +33,19 @@ function OffcanvasExample() {
                   <Nav.Link as={Link} to="/">Search Games</Nav.Link>
                   <Nav.Link as={Link} to="/">Find People</Nav.Link>
                   <Nav.Link as={Link} to="/">Find Groups</Nav.Link>
-                  <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                  <Nav.Link as={Link} to="/">Sign-up</Nav.Link>
+                  {Auth.loggedIn() ? (
+                    <>
+                        <Nav.Link as={Link} to='/saved'>
+                            Saved Games
+                        </Nav.Link>
+                        <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                    </>
+                  ) : (
+                    <div>
+                        <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                        <Nav.Link as={Link} to="/signUp">Sign-up</Nav.Link>
+                    </div>
+                  )}
                 </Nav>
                 <Form className="d-flex">
                   <Form.Control
