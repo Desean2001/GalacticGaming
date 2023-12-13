@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   define: {
-    'process.env.VITE_KEY_ID': JSON.stringify(process.env.VITE_KEY_ID),
+    'import.meta.env.VITE_KEY_ID': JSON.stringify(import.meta.env.VITE_KEY_ID),
   },
   server: {
     port: 4000,
