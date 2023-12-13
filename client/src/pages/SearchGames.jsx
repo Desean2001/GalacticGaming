@@ -38,9 +38,9 @@ const SearchGames = () => {
     try {
       const response = await gameSeach(searchInput);
 
-      //if (!response.ok) {
-        //throw new Error('something went wrong!');
-      //}
+      if (!response.ok) {
+        throw new Error('something went wrong!');
+      }
 
       const { results } = await response.json();
 
