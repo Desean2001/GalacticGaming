@@ -5,6 +5,9 @@ const routes = require('./routes');
 
 const app = express();
 const PORT = import.meta.env.PORT || 3001;
+const cors = require('cors')
+
+app.use(cors())
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
