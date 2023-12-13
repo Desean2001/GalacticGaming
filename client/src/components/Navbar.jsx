@@ -27,12 +27,12 @@ function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link link={Link} to="/">Home</Nav.Link>
-                  <Nav.Link link={Link} to="/">Search Games</Nav.Link>
-                  <Nav.Link link={Link} to="/">Find People</Nav.Link>
-                  <Nav.Link link={Link} to="/">Find Groups</Nav.Link>
-                  <Nav.Link link={Link} to="/login">Login</Nav.Link>
-                  <Nav.Link link={Link} to="/">Sign-up</Nav.Link>
+                  <Nav.Link as={Link} to="/">Home</Nav.Link>
+                  <Nav.Link as={Link} to="/">Search Games</Nav.Link>
+                  <Nav.Link as={Link} to="/">Find People</Nav.Link>
+                  <Nav.Link as={Link} to="/">Find Groups</Nav.Link>
+                  <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                  <Nav.Link as={Link} to="/">Sign-up</Nav.Link>
                 </Nav>
                 <Form className="d-flex">
                   <Form.Control
