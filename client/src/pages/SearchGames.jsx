@@ -36,7 +36,7 @@ const SearchGames = () => {
     }
 
     try {
-      const response = await gameSeach(process.env.KEY_ID, searchInput);
+      const response = await gameSeach(import.meta.env.KEY_ID, searchInput);
 
       if (!response.ok) {
         throw new Error('something went wrong!');
