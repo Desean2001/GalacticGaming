@@ -114,7 +114,7 @@ const SearchGames = () => {
           {searchedGame.map((game) => {
             return (
               <Col md="4" key={game.gameId}>
-                <Card border='dark'>
+                <Card border='light'>
                   {game.background_image ? (
                     <Card.Img src={game.background_image} alt={`The cover for ${game.name}`} variant='top' />
                   ) : null}
