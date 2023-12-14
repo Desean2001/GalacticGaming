@@ -3,6 +3,15 @@ export const getMe = (token) => {
         headers: {
             'Content-Type': 'application/json',
             authorization: `Bearer ${token}`,
+        }
+    });
+};
+
+export const findUsername = (username) => {
+    return fetch(`/api/users/${username}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
         },
     });
 };
@@ -43,6 +52,26 @@ export const deleteGame = (gameId, token) => {
         method: 'DELETE', 
         headers: {
             authorization: `Bearer ${token}`
+        },
+    });
+};
+
+export const createFriend = (userData, token) => {
+    return fetch(`/api/users/friends/${userData}`, {
+        meathod: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(userData)
+    });
+};
+
+export const deleteFriend = (friendId, token) => {
+    return fetch(`/api/users/friends/${friendId}`, {
+        meathod: 'DELETE',
+        headers: {
+            authorization: `Bearer ${token}`,
         },
     });
 };

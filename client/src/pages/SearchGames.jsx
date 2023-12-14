@@ -13,21 +13,17 @@ import { saveGame, gameSeach } from '../utils/API';
 import { saveGameIds, getSavedGameIds } from '../utils/localStorage';
 
 const SearchGames = () => {
-  // create state for holding returned google api data
+
   const [searchedGame, setSearchedGame] = useState([]);
-  // create state for holding our search field data
+
   const [searchInput, setSearchInput] = useState('');
 
-  // create state to hold saved bookId values
   const [savedGameIds, setSavedGameIds] = useState(getSavedGameIds());
 
-  // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
-  // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
   useEffect(() => {
     return () => saveGameIds(savedGameIds);
   });
 
-  // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -62,7 +58,6 @@ const SearchGames = () => {
   const handleSaveGame = async (gameId) => {
     const gameToSave = searchedGame.find((game) => game.gameId === gameId);
 
-    // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -76,7 +71,6 @@ const SearchGames = () => {
         throw new Error('something went wrong!');
       }
 
-      // if book successfully saves to user's account, save book id to state
       setSavedGameIds([...savedGameIds, gameToSave.gameId]);
     } catch (err) {
       console.error(err);

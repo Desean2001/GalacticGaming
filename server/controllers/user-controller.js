@@ -15,6 +15,18 @@ module.exports = {
     res.json(foundUser);
   },
 
+  async findUsername(req, res) {
+    const { username } = req.params;
+
+    const foundUsername = await User.findOne({ username })
+
+    if (!foundUsername) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.json(foundUsername);
+  },
+
   async createUser({ body }, res) {
     const user = await User.create(body);
 
@@ -66,4 +78,40 @@ module.exports = {
     }
     return res.json(updatedUser);
   },
+
+  async createFriend(req, res) {
+    try {
+        const user = await User.findOneAndUpdate(
+            { _id: req.params.userId },
+            { $addToSet: { friends: req.params.friendId } },
+            { runValidators: true, new: true }
+        );
+
+        if (!user) {
+            return res.status(404).json({ message: 'No user with this id!' });
+          }
+    
+        res.json(user);
+    } catch(err) {
+        res.status(500).json(err)
+    };
+},
+
+async deleteFriend(req, res) {
+    try {
+        const user = await User.findOneAndUpdate(
+            { _id: req.params.userId },
+            { $pull: { friends: req.params.friendId } },
+            { new: true }
+        );
+
+        if(!user) {
+            res.status(404).json({ message: "No User find with this ID!" });
+        }
+
+        res.json(user);
+    } catch(err) { 
+        res.status(500).json(err)
+    };
+},
 }

@@ -41,7 +41,6 @@ const SavedGames = () => {
     getUserData();
   }, [userDataLength]);
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteGame = async (gameId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -91,7 +90,7 @@ const SavedGames = () => {
                     <Card.Title>{game.name}</Card.Title>
                     <p className='small'>Metacritic: {game.metacritic}</p>
                     <Card.Text>{game.released}</Card.Text>
-                    <Button className='btn-block btn-danger' onClick={() => handleDeleteGame(game.gameId)}>
+                    <Button className='btn-block btn-danger' onClick={() => handleDeleteGame(game.gameId, token)}>
                       Delete this Game
                     </Button>
                   </Card.Body>
