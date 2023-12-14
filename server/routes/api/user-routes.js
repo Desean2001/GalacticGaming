@@ -9,7 +9,7 @@ const {
   deleteGame,
   login,
   createFriend,
-  deleteFriend,
+  //deleteFriend,
 } = require('../../controllers/user-controller');
 
 // import middleware
@@ -26,6 +26,6 @@ router.route('/me').get(authMiddleware, getSingleUser);
 
 router.route('/games/:gameId').delete(authMiddleware, deleteGame);
 
-router.route('/:userId/friends/:friendId').post(createFriend).delete(deleteFriend);
+router.route('/:userId/friends/:friendId').post(createFriend);
 
 module.exports = router;
