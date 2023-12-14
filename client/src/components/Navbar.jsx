@@ -42,7 +42,7 @@ function OffcanvasExample() {
                     </>
                   ) : (
                     <div>
-                        <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                        <Nav.Link as={Link} to="/LogIn">Login</Nav.Link>
                         <Nav.Link as={Link} to="/signUp">Sign-up</Nav.Link>
                     </div>
                   )}

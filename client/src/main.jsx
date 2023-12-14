@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         path: '/saved',
         element: <SavedGames />
       }, {
-        path: '/login',
+        path: '/LogIn',
         element: <LoginForm />
       }, {
         path: '/signUp',
