@@ -5,7 +5,7 @@ import { findUsername, createFriend } from '../utils/API';
 import { getFriendIds, saveFriendIds } from '../utils/localStorage';
 import Auth from '../utils/auth';
 
-const findPeopleForm = () => {
+const FindPeopleForm = () => {
 
     const [searchedPeople, setSearchedPeople] = useState([])
 
@@ -136,4 +136,4 @@ const findPeopleForm = () => {
     );
 };
 
-export default findPeopleForm;
+export default FindPeopleForm;
