@@ -1,6 +1,3 @@
-
-import axios from 'axios';
-
 export const getMe = (token) => {
     return fetch('/api/users/me', {
         headers: {
@@ -41,6 +38,15 @@ export const saveGame = (gameData, token) => {
     });
   };
   
+export const deleteGame = (gameId, token) => {
+    return fetch(`/api/users/games/${gameId}`, {
+        method: 'DELETE', 
+        headers: {
+            authorization: `Bearer ${token}`
+        },
+    });
+};
+
 const key = import.meta.env.VITE_KEY_ID
 
 export const gameSeach = (search) => {
