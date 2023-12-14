@@ -10,7 +10,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 function OffcanvasExample() {
   return (
     <>
-      {[false].map((expand) => (
+      {['xxl'].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary bg-dark mb-3 100vw">
           <Container fluid>
             <Navbar.Brand classname="">Galactic Gaming</Navbar.Brand>
