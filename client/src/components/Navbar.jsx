@@ -14,7 +14,7 @@ function OffcanvasExample() {
     <>
       {[false].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary bg-dark mb-3">
-          <Container fluid>
+          <Container fluid className="full-width">
             <Navbar.Brand href="#">Galactic Gaming</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
