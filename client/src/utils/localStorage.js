@@ -29,33 +29,33 @@ export const getSavedGameIds = () => {
     return true;
   };
 
-  export const getFriendIds = () => {
-    const friendsIds = localStorage.getItem('friends')
-      ? JSON.parse(localStorage.getItem('friends'))
-      : [];
+  //export const getFriendIds = () => {
+  //  const friendsIds = localStorage.getItem('friends')
+   //   ? JSON.parse(localStorage.getItem('friends'))
+    //  : [];
 
-    return friendsIds;
-  };
+  //  return friendsIds;
+  //};
 
-  export const saveFriendIds = (friendsArr) => {
-    if (friendArr.length) {
-      localStorage.setItem('friends', JSON.stringify(friendsArr));
-    } else {
-      localStorage.removeItem('friends');
-    }
-  };
+ // export const saveFriendIds = (friendsArr) => {
+ //   if (friendArr.length) {
+ //     localStorage.setItem('friends', JSON.stringify(friendsArr));
+  //  } else {
+   //   localStorage.removeItem('friends');
+  //  }
+  //};
 
-  export const removeFriendsId = (friendId) => {
-    const friendsIds = localStorage.getItem('friends')
-      ? JSON.parse(localStorage.getItem('friends'))
-      : null;
+ // export const removeFriendsId = (friendId) => {
+  //  const friendsIds = localStorage.getItem('friends')
+   //   ? JSON.parse(localStorage.getItem('friends'))
+  //    : null;
+//
+   //   if (!friendsIds) {
+   //     return false;
+   //   }
 
-      if (!friendsIds) {
-        return false;
-      }
-
-      const updatedFriendsIds = friendsIds?.filter((savedFriend) => savedFriend !== friendId);
-      localStorage.setItem('friends', JSON.stringify(updatedFriendsIds));
-
-      return true;
-  };
+  //    const updatedFriendsIds = friendsIds?.filter((savedFriend) => savedFriend !== friendId);
+  //    localStorage.setItem('friends', JSON.stringify(updatedFriendsIds));
+//
+  //    return true;
+//  };

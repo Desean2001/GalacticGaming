@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Container, Form, Button} from 'react-bootstrap';
+//import { useState, useEffect } from 'react';
+//import { Container, Form, Button} from 'react-bootstrap';
 
-import { findUsername, createFriend } from '../utils/API';
-import { getFriendIds, saveFriendIds } from '../utils/localStorage';
-import Auth from '../utils/auth';
+//import { findUsername, createFriend } from '../utils/API';
+//import { getFriendIds, saveFriendIds } from '../utils/localStorage';
+//import Auth from '../utils/auth';
 
 const FindPeopleForm = () => {
 

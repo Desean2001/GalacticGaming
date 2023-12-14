@@ -21,13 +21,12 @@ const userSchema = new Schema(
       required: true,
     },
     savedGames: [gameSchema],
-    friends: [{ type: Schema.Types.ObjectId, ref: 'User'}]
+    //friends: [{ type: Schema.Types.ObjectId, ref: 'User'}]
   },
   {
     toJSON: {
       virtuals: true,
     },
-    id: false,
   }
 );
 
@@ -48,9 +47,9 @@ userSchema.virtual('gameCount').get(function () {
     return this.savedGames.length;
 });
 
-userSchema.virtual('friendAmount').get(function () {
-  return this.friends.length;
-});
+//userSchema.virtual('friendAmount').get(function () {
+//  return this.friends.length;
+//});
 
 const User = model('User', userSchema);
 
