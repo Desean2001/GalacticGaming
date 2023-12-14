@@ -132,7 +132,7 @@ const FindPeopleForm = () => {
           })}
         </Row>
       </Container>
-    </div>
+     </div>
     );
 };
 
