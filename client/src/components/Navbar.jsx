@@ -31,13 +31,12 @@ function OffcanvasExample() {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link as={Link} to="/">Home</Nav.Link>
                   <Nav.Link as={Link} to="/">Search Games</Nav.Link>
-                  <Nav.Link as={Link} to="/">Find Groups</Nav.Link>
                   {Auth.loggedIn() ? (
                     <>
                         <Nav.Link as={Link} to='/saved'>
                             Saved Games
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/FindPeople">Find People</Nav.Link>
+                        {/*<Nav.Link as={Link} to='/findPeople'>Find People</Nav.Link>*/}
                         <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                     </>
                   ) : (
