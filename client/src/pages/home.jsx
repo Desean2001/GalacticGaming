@@ -7,10 +7,10 @@ const HomePage = () => {
     <Container fluid>
         <div className='vertical-center-container'>
             <h1 className='text-light'>Welcome to GalacticGaming</h1>
-            <p className='text-light'>
-            Explore the universe of gaming adventures and beyond. May the force of great games be with you!
-            </p>
         </div>
+        <p className='text-light'>
+            Explore the universe of gaming adventures and beyond. May the force of great games be with you!
+        </p>
     </Container>
   );
 };
