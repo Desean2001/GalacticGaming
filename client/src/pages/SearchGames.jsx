@@ -103,7 +103,7 @@ const SearchGames = () => {
           </Form>
         </Container>
       </div>
-
+      <div classname="text-light bg-dark">
       <Container>
         <h2 className='pt-5'>
           {searchedGame.length
@@ -139,6 +139,7 @@ const SearchGames = () => {
           })}
         </Row>
       </Container>
+      </div>
     </>
   );
 };
