@@ -79,5 +79,5 @@ export const deleteFriend = (friendId, token) => {
 const key = import.meta.env.VITE_KEY_ID
 
 export const gameSeach = (search) => {
-    return fetch(`https://api.rawg.io/api/games?key=${key}&search=${search}&page_size=4`)
+    return fetch(`https://api.rawg.io/api/games?key=${key}&search=${search}&page_size=9`)
 };
