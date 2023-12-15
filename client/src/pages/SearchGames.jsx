@@ -80,7 +80,7 @@ const SearchGames = () => {
   return (
     <>
       <div className="text-light bg-dark p-5">
-        <Container>
+        <Container className='container-fluid'>
           <h1>Search for Games</h1>
           <Form onSubmit={handleFormSubmit}>
             <Row>
@@ -103,9 +103,8 @@ const SearchGames = () => {
           </Form>
         </Container>
       </div>
-      <div classname="text-light bg-dark">
-      <Container>
-        <h2 className='pt-5'>
+      <Container className='container-fluid'>
+        <h2 className='pt-5 text-light'>
           {searchedGame.length
             ? `Viewing ${searchedGame.length} results:`
             : 'Search for a Game'}
@@ -139,7 +138,6 @@ const SearchGames = () => {
           })}
         </Row>
       </Container>
-      </div>
     </>
   );
 };
