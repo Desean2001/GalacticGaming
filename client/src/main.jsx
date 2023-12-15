@@ -9,6 +9,7 @@ import SearchGames from './pages/SearchGames'
 import SavedGames from './pages/SavedGames.jsx'
 import LoginForm from './pages/login.jsx'
 import SignupForm from './pages/signUp.jsx'
+import HomePage from './pages/home.jsx'
 {/*import FindPeopleForm from './pages/findPeople.jsx'*/}
 
 const router = createBrowserRouter([
@@ -19,6 +20,9 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <HomePage />
+      }, {
+        path: '/search',
         element: <SearchGames />
       }, {
         path: '/saved',
