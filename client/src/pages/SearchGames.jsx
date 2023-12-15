@@ -120,7 +120,7 @@ const SearchGames = () => {
                   <Card.Body>
                     <Card.Title>{game.name}</Card.Title>
                     <p className='small'>Released: {game.released}</p>
-                    <Card.Text>{game.metacritic}</Card.Text>
+                    <Card.Text>Metacritic Score: {game.metacritic}</Card.Text>
                     {Auth.loggedIn() && (
                       <Button
                         disabled={savedGameIds?.some((savedGameId) => savedGameId === game.gameId)}
