@@ -6,7 +6,7 @@ import image from "../public/360_F_215948377_kgIhNUy4X0iYsyUfYd9KKIViSPOxclbC.jp
 
 function App() {
   return (
-    <div style={{ backgroundImage:`url(${image})` }}>
+    <div className='app' style={{ backgroundImage:`url(${image})` }}>
       <Navbar />
       <Outlet />
     </div>
